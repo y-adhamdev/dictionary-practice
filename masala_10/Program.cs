@@ -7,12 +7,20 @@
 
 Console.Write("Loginingizni kiriting: ");
 string? login =  Console.ReadLine();
+Console.Write("Passwordni kiriting: ");
+string? UserPasswor =  Console.ReadLine();
+
+
 
 if(users.TryGetValue(login!, out string? password))
 {
-    if(users[login!] == password)
+    if(password == UserPasswor)
     {
         System.Console.WriteLine("Login successful");
+    }
+    else
+    {
+        System.Console.WriteLine("Incorrect password.");
     }
 }
 else
